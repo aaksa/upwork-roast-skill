@@ -1,0 +1,20 @@
+{
+  "name": "upwork-roast-skill",
+  "description": "Five reviewers roast your Upwork profile separately (a client in a hurry, a tech lead, a field expert, an Upwork talent scout and a competitor), quote every weak line, then fix your title, overview, portfolio, skills and proposal template in your own voice, without inventing numbers.",
+  "version": "1.1.0",
+  "author": {
+    "name": "Aaksanurirwan",
+    "url": "https://github.com/aaksa"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "claude-skills",
+    "upwork",
+    "freelance",
+    "profile",
+    "roast"
+  ],
+  "repository": "https://github.com/aaksa/upwork-roast-skill",
+  "homepage": "https://github.com/aaksa/upwork-roast-skill"
+}

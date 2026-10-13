@@ -1,0 +1,7 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "upwork-roast-skill",
+  "description": "The Upwork roast skill for Claude Code",
+  "owner": {"name": "Aaksanurirwan"},
+  "plugins": [{"name": "upwork-roast-skill", "description": "Five reviewers roast your Upwork profile, then fix it in your own voice.", "source": "./", "category": "productivity", "author": {"name": "Aaksanurirwan", "url": "https://github.com/aaksa"}}]
+}
