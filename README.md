@@ -27,7 +27,11 @@ wordy, no proof, too generic, or sounds AI-written**.
    - portfolio descriptions as problem → what I built → result
    - 15 ranked skills, plus 5 more if your editor allows 20
    - a short proposal template that matches the new profile
-4. **`[ADD: ...]` questions** for every fact it needs from you. It never invents numbers, results or clients.
+4. **A blind hook test.** Your new title and first 250 characters go into a search-results lineup with five realistic
+   competitor cards, and two client judges who don't know which card is yours pick what they'd open. It rewrites and
+   re-tests (up to 3 rounds) until both open your card first, and shows you the results table.
+5. **Questions** for every fact that would make the copy stronger, each with the exact sentence to add. Profile copy
+   ships with no placeholders, and it never invents numbers, results or clients.
 
 It talks to you in your language and writes all profile copy in English. Everything is saved to
 `.upwork-roast/<date>-<name>/ROAST.md` where you run it.
@@ -45,6 +49,11 @@ labelled third-party data. The short version: **proof, not polish.**
   AI-sounding patterns and makes copy human through specifics, not fake chattiness.
 - Simple, clear editing of profile text raised hires about 8% in a study of ~500,000 jobseekers. So the skill **edits your
   own words instead of replacing them**.
+- When the judge knows which card is yours, every hook passes. So the hook test is blind, against strong competitors,
+  with your card moved between slots. In testing, the winning pattern was:
+  - a title that is exactly what the client types, including every platform you sell
+  - a named, checkable result in the first sentence
+  - a second proof covering the rest of what the title promises
 - Since May 28, 2026 Upwork has one dynamic profile that pulls your most relevant work forward for each client. So every
   service needs real, described portfolio items.
 
@@ -84,8 +93,9 @@ and work history with reviews. Try it on the example first:
 /upwork-roast examples/sample-profile.md
 ```
 
-One run is five sub-agent calls and counts toward your Claude plan's usage. Fill in every `[ADD: ...]` before you
-publish anything: those gaps are where your real proof goes.
+One run is five reviewer calls plus the hook test (two blind judges per variant, up to three rounds), so it takes a
+few minutes and counts toward your Claude plan's usage. The judges are language-model simulations and the competitor
+cards are invented, so check the real result in Upwork's Stats and trends 30 days after you publish.
 
 ## Layout
 
@@ -94,6 +104,7 @@ skills/upwork-roast/
   SKILL.md                          the workflow
   references/reviewers.md           the five reviewer briefs, passed to each sub-agent word for word
   references/fix-rules.md           rules for every fix, voice rules, AI-sounding words and patterns
+  references/hook-test.md           the blind lineup test for the title and first 250 characters
   references/upwork-facts-2026.md   how clients decide, field limits, platform rules, with sources
 research/upwork-roast-research-2026.md   the full sourced research report
 examples/sample-profile.md         a weak generalist profile to try it on

@@ -1,11 +1,11 @@
 ---
 name: upwork-roast
 description: >-
-  Roast an Upwork freelancer profile with five reviewers who each judge it separately (a client in a hurry who sees only the search card, a tech lead, an expert in the freelancer's field, an Upwork talent scout and a competitor in the same niche), grounded in Upwork's 2026 rules, academic hiring research and how clients now react to AI-sounding copy. Roasts the title first, quotes every weak line and says why it loses the job (no numbers, too wordy, no proof, too generic, sounds AI-written), then fixes everything in the freelancer's own voice: three new titles, an overview with a 200-character hook, portfolio descriptions as problem → what I built → result, ranked skills, and a short proposal template that matches the new profile. Use when the user types /upwork-roast with a profile PDF or pasted text, or asks to roast, tear apart or brutally review their Upwork profile.
+  Roast an Upwork freelancer profile with five reviewers who each judge it separately (a client in a hurry who sees only the search card, a tech lead, an expert in the freelancer's field, an Upwork talent scout and a competitor in the same niche), grounded in Upwork's 2026 rules, academic hiring research and how clients now react to AI-sounding copy. Roasts the title first, quotes every weak line and says why it loses the job (no numbers, too wordy, no proof, too generic, sounds AI-written), then fixes everything in the freelancer's own voice and tests the new search-card hook blind against competitor cards until clients open it first: three new titles, an overview with a 200-character hook, portfolio descriptions as problem → what I built → result, ranked skills, and a short proposal template that matches the new profile. Use when the user types /upwork-roast with a profile PDF or pasted text, or asks to roast, tear apart or brutally review their Upwork profile.
 argument-hint: "<profile PDF or pasted profile text>"
 license: MIT
 metadata:
-  version: "1.1.0"
+  version: "1.2.0"
   facts-checked: "2026-10-13"
 ---
 
@@ -15,9 +15,10 @@ The user gives you their Upwork profile after `/upwork-roast`. Five reviewers ro
 
 **The idea behind every fix: proof, not polish.** Since AI tools made fluent copy free, clients and Upwork's own AI discount polished, tailored-sounding text and look for concrete, checkable proof. Upwork itself now names AI-sounding copy as a growing reason clients discard applications. So the fixes keep the freelancer's voice, put their strongest real proof into the few characters clients see, and invent nothing.
 
-Before starting, read all three reference files in this skill folder:
+Before starting, read all four reference files in this skill folder:
 - `references/reviewers.md`: the five reviewer briefs, what each one receives, and the answer format.
 - `references/fix-rules.md`: the rules for every fix, the voice rules and the list of AI-sounding words and patterns.
+- `references/hook-test.md`: how to test the new title and first 250 characters blind, in a lineup of competitor cards, and iterate until clients open it first.
 - `references/upwork-facts-2026.md`: how clients decide, field limits (with the places Upwork's own pages disagree), platform rules and proposal evidence, with sources, checked 2026-10-13.
 
 ## Language
@@ -80,12 +81,20 @@ Where a limit is disputed between Upwork's own pages (title, skills, portfolio),
 
 **Self-check before showing the fixes**: scan every rewrite for the AI-sounding words and patterns in `fix-rules.md`, for invented facts (anything not on the fact sheet), for any `[ADD` left in profile copy, for an audience narrower than the user asked for, for what falls at character 250, and for typos. Fix them before showing anything.
 
-**Re-roast before showing.** Run The Client in a Hurry and The Competitor again, separately, on the fixed search card and the fixed profile (same briefs, no notes from round one). If either still says PASS, or names a problem the fix introduced, fix it and say what changed. Report their before and after verdicts.
+**Test the hook blind.** Follow `references/hook-test.md`:
+1. Write three hook variants (title plus first paragraph).
+2. Put each in a six-card lineup with five synthetic competitor cards, the freelancer's card in a different slot each time.
+3. Have two blind client judges pick which cards they'd open.
+4. Iterate (at most 3 rounds) until both open the freelancer's card first.
+
+The winning hook becomes the title and first paragraph of the overview.
+
+**Re-roast the rest.** Run The Competitor again, separately, on the full fixed profile (same brief, no notes from round one). If it names a problem the fix introduced, fix it and say what changed.
 
 Then **What changed**: one line per problem from step 3, saying how it was fixed. Then the **questions for the user**: the facts that would make the copy stronger, the most valuable first (a missing result or app name beats a missing tool), each with the sentence it unlocks.
 
 ## 5. Save it
-Write everything (fact sheet, search card, the five roasts, the fixes and the `[ADD: ...]` questions) to `.upwork-roast/<YYYY-MM-DD>-<name-or-field-slug>/ROAST.md` in the current directory. Touch no other files. Show the user, in chat: the title roast, each reviewer's opinion, what they all agree on, every fix in its code block, and the `[ADD: ...]` questions. Say where the file is.
+Write everything (fact sheet, search card, the five roasts, the hook test with its lineups, the fixes and the questions) to `.upwork-roast/<YYYY-MM-DD>-<name-or-field-slug>/ROAST.md` in the current directory. Touch no other files. Show the user, in chat: the title roast, each reviewer's opinion, what they all agree on, the hook test table and winning hook, every fix in its code block, and the questions for the user. Say where the file is.
 
 ## Rules
 - Never invent numbers or results. If it's not on the fact sheet, it stays out of the copy and goes into "Make it stronger". "Worked on" never becomes "built".

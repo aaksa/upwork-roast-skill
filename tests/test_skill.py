@@ -57,7 +57,7 @@ class RoastSkillTest(unittest.TestCase):
         self.assertIn("zero placeholders", self.skill)
         self.assertIn("Make it stronger", self.rules)
         self.assertIn("Keep the user's audience", self.rules)
-        self.assertIn("Re-roast before showing", self.skill)
+        self.assertIn("Test the hook blind", self.skill)
 
     def test_language(self):
         self.assertIn("language they write to you in", self.skill)
@@ -84,6 +84,15 @@ class RoastSkillTest(unittest.TestCase):
         for name in ("plugin.json", "marketplace.json"):
             with open(os.path.join(ROOT, ".claude-plugin", name)) as f:
                 self.assertEqual(json.load(f)["name"], "upwork-roast-skill")
+
+    def test_blind_hook_test(self):
+        hook = read("references", "hook-test.md")
+        self.assertIn("references/hook-test.md", self.skill)
+        self.assertIn("Never tell a judge which card is the freelancer's", hook)
+        self.assertIn("different slot in every lineup", hook)
+        self.assertIn("synthetic competitor cards", hook)
+        self.assertIn("after 3 rounds", hook)
+        self.assertIn("CARDS I'D OPEN", hook)
 
     def test_voice(self):
         self.assertIn("Edit, don't replace.", self.rules)
