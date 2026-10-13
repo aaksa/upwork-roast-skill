@@ -53,8 +53,11 @@ class RoastSkillTest(unittest.TestCase):
 
     def test_never_invent(self):
         self.assertIn("Never invent numbers or results", self.skill)
-        self.assertIn("[ADD: what is needed]", self.skill)
         self.assertIn("fact sheet", self.skill)
+        self.assertIn("zero placeholders", self.skill)
+        self.assertIn("Make it stronger", self.rules)
+        self.assertIn("Keep the user's audience", self.rules)
+        self.assertIn("Re-roast before showing", self.skill)
 
     def test_language(self):
         self.assertIn("language they write to you in", self.skill)

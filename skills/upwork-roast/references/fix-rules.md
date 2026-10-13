@@ -20,11 +20,20 @@ Flag these in the roast (reason: **sounds AI-written**) and never put them in a 
 - **Structures:** "not just X, but Y" / "It's not X, it's Y"; everything in threes; "serves as / stands as / a testament to"; trailing "-ing" clauses ("…, ensuring quality"); openers like "In today's fast-paced world"; summary closers ("In short, …"); keyword lists; the same claim repeated in different words.
 - **Em dashes:** a weak signal only. Keep them rare; never call text AI-written for em dashes alone.
 
-## Never invent
+## Never invent, and never ship a gap
 
 - Use only the fact sheet: no new numbers, results, client names, review quotes, years, tools, certifications or badges.
 - A number can be moved or shortened, never changed or rounded up. "Worked on" never becomes "built".
-- Where a fix needs a fact the freelancer hasn't given, write `[ADD: what is needed]`, for example `[ADD: app name]` or `[ADD: how many users at launch]`. A plain directional result the freelancer confirms ("cut load time noticeably") beats no result.
+- **The title, overview, skills and portfolio copy must be publishable as-is, with zero placeholders.** A real profile reviewer reads a published `[ADD: ...]` as "nobody checked this profile" (all reviewers flagged it in testing). If a line needs a fact you don't have, leave the line out and write the copy from the facts you do have.
+- Put every missing fact in a separate **"Make it stronger"** list under each piece of copy: what to add, and the exact sentence to add once the user has the fact.
+- `[ADD: ...]` is allowed only inside the proposal template, where the user fills it in per job.
+- Only use work as proof if it has client feedback or a named result. An item with "no feedback given" can be listed as experience, never as a highlight.
+- A plain directional result the freelancer confirms ("cut load time noticeably") beats no result.
+
+## 0. Keep the user's audience
+
+- Write for the clients the user said they want. Never narrow it to a sub-group (for example "startups only" when they said startups and businesses, or "mobile" when they also want web). In testing, a narrowed title made the target client think the profile wasn't for them.
+- If the user wants mobile and web, the title or the first 200 characters must say both.
 
 ## 1. Three titles
 
@@ -36,7 +45,9 @@ Flag these in the roast (reason: **sounds AI-written**) and never put them in a 
 
 ## 2. Overview
 
-- **The first 200 characters are the hook; the first ~250 are the search preview.** Together they must name the client type, the service or problem, and the single strongest proof on the fact sheet. Don't let the text break mid-thought at 250. Show both counts.
+- **The first 200 characters are the hook; the first ~250 are the search preview.** Together they must name the client type, the service or problem, and the single strongest proof on the fact sheet. Show both counts.
+- Check exactly what falls at character 250: a credential, parenthesis or name cut in half there is wasted. End the first paragraph before 250, and start the second with something that still reads well when cut.
+- Generic reassurances such as "integrations you can rely on", "clean code" or "on time" count as filler unless they name the specific thing (Firebase, Supabase, Stripe, the OpenAI API).
 - Never open with the freelancer's name, a greeting, years of experience, excitement, a badge the card already shows, or a question that could sit on any profile.
 - After the hook: services → proof → how you work (only if the freelancer said so) → one clear next step on Upwork.
 - **One profile now serves every client.** Lead with the main service. Give secondary services one short "I also help with…" line, not equal billing. Upwork reorders the portfolio and work history per client, so each service line needs matching portfolio items, not more overview text.

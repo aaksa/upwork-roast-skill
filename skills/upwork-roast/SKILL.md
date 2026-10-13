@@ -65,7 +65,9 @@ If the Agent tool isn't available, play the five reviewers yourself one at a tim
 Keep each reviewer's words; only trim. Then **"What they all agree on"**: the red flags from step 1 first, then the three to five problems more than one reviewer raised, worst first.
 
 ## 4. Fix everything
-Follow `references/fix-rules.md`. **Edit the freelancer's own text; don't replace it.** Keep the lines reviewers praised (THE BEST LINE). Use only the fact sheet. Never invent numbers, results, clients, reviews, years, tools or credentials. Wherever a fix needs something the user hasn't given, write `[ADD: what is needed]`.
+Follow `references/fix-rules.md`. **Edit the freelancer's own text; don't replace it.** Keep the lines reviewers praised (THE BEST LINE). Write for the audience the user asked for; never narrow it. Use only the fact sheet. Never invent numbers, results, clients, reviews, years, tools or credentials.
+
+**Profile copy ships with zero placeholders.** The title, overview, skills and portfolio copy must be publishable exactly as shown. When a fact is missing, write the copy without it, and put the missing fact in a **"Make it stronger"** list under that piece of copy, with the exact sentence to add once the user has it. Only the proposal template may contain `[ADD: ...]`, because it's filled in per job.
 
 Give every piece of copy in its own code block, ready to paste, with its counts. Count with a script, never estimate.
 1. **3 new titles**: service keyword first, aim for 50 characters or fewer, never over 70.
@@ -76,15 +78,17 @@ Give every piece of copy in its own code block, ready to paste, with its counts.
 
 Where a limit is disputed between Upwork's own pages (title, skills, portfolio), say so in one line and tell the user to check the counter in their editor.
 
-**Self-check before showing the fixes**: scan every rewrite for the AI-sounding words and patterns in `fix-rules.md`, for invented facts (anything not on the fact sheet), and for typos. Fix them before showing anything.
+**Self-check before showing the fixes**: scan every rewrite for the AI-sounding words and patterns in `fix-rules.md`, for invented facts (anything not on the fact sheet), for any `[ADD` left in profile copy, for an audience narrower than the user asked for, for what falls at character 250, and for typos. Fix them before showing anything.
 
-Then **What changed**: one line per problem from step 3, saying how it was fixed. Then the `[ADD: ...]` questions for the user, the most valuable proof first (a missing result or app name beats a missing tool).
+**Re-roast before showing.** Run The Client in a Hurry and The Competitor again, separately, on the fixed search card and the fixed profile (same briefs, no notes from round one). If either still says PASS, or names a problem the fix introduced, fix it and say what changed. Report their before and after verdicts.
+
+Then **What changed**: one line per problem from step 3, saying how it was fixed. Then the **questions for the user**: the facts that would make the copy stronger, the most valuable first (a missing result or app name beats a missing tool), each with the sentence it unlocks.
 
 ## 5. Save it
 Write everything (fact sheet, search card, the five roasts, the fixes and the `[ADD: ...]` questions) to `.upwork-roast/<YYYY-MM-DD>-<name-or-field-slug>/ROAST.md` in the current directory. Touch no other files. Show the user, in chat: the title roast, each reviewer's opinion, what they all agree on, every fix in its code block, and the `[ADD: ...]` questions. Say where the file is.
 
 ## Rules
-- Never invent numbers or results. If it's not on the fact sheet, it gets `[ADD: ...]`. "Worked on" never becomes "built".
+- Never invent numbers or results. If it's not on the fact sheet, it stays out of the copy and goes into "Make it stronger". "Worked on" never becomes "built".
 - Roast the profile, never the person. Comment on a photo only if it's unclear or breaks Upwork's photo rules.
 - Never keep or add contact details, outside links meant to move clients off Upwork, or claims that misstate an Upwork badge.
 - Describe paid features accurately: the Availability Badge and boosting buy visibility, not trust. Quote Upwork's percentages only as Upwork's own claims.
